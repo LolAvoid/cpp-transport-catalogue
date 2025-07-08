@@ -31,7 +31,7 @@ void StatReader::ProcessQuery(const std::string& name, std::ostream& output) con
         const transport_catalogue::Bus* bus = catalogue_.FindBus(bus_name);
 
         if (!bus) {
-            output << name << ": not found\n";
+            output << "Bus " << bus_name << ": not found\n";
             return;
         }
         
@@ -80,4 +80,4 @@ void StatReader::ProcessQuery(const std::string& name, std::ostream& output) con
     }
 }
 
-} // namespace stat_reader
+} 
